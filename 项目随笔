@@ -1,0 +1,13 @@
+使用工具：Maven 3.61
+删除本地仓库中错误的jar包：for /r %i in (*.lastUpdated) do del %i
+JDK: jdk1.8.0_191
+
+Project_Parent
+    pom.xml
+        <parent>
+                    默认值为../pom.xml
+                    查找顺序：relativePath元素中的地址–本地仓库–远程仓库
+                    设定一个空值将始终从仓库中获取，不从本地路径获取，如<relativePath />
+        </parent>
+
+        starter:场景启动器，Spring Boot 将所有的插件当作场景，当用到一个插件时，就只需要加入该插件相对应得场景即可

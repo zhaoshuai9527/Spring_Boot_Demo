@@ -1,0 +1,32 @@
+server:
+  port: 1111
+project:
+  host: 127.0.0.1
+
+spring:
+  application:
+    name: Project-Lable
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.77.145.221:3306/Spring_Boot_Parent?characterEncoding=utf-8
+    username: root
+    password: 0
+
+  jpa:
+    database: MySQL
+    generate-ddl: true  #如果没有表则自动创建表，如果有表不作修改
+    show-sql: true  #在控制台展示sql，默认是不展示的
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect   #设置方言，防止乱码
+
+
+  reids:
+    host: 120.77.145.221
+    port: 6379
+    pool:
+      max-active: 8   # 连接池最大连接数（使用负值表示没有限制）
+      max-wait: -1    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 8     # 连接池中的最大空闲连接
+      min-idle: 0     # 连接池中的最小空闲连接

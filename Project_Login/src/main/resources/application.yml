@@ -1,0 +1,22 @@
+server:
+  port: 2222
+project:
+  host: 127.0.0.1
+
+spring:
+  application:
+    name: Project-Login
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.77.145.221:3306/Spring_Boot_Parent?characterEncoding=utf-8
+    username: root
+    password: 0
+
+  jpa:
+    database: MySQL
+    generate-ddl: true  #如果没有表则自动创建表，如果有表不作修改
+    show-sql: true  #在控制台展示sql，默认是不展示的
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect   #设置方言，防止乱码
